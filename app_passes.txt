@@ -1,0 +1,3 @@
+username: zadanie_testowe
+password: zadanie_testowe
+email: zadanie_testowe@gmail.com

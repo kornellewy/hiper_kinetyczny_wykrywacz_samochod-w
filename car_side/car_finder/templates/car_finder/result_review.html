@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% for car in cars %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <h2>{{ car.name }}</h2>
+            <img height="500" width="1000" class="img-fluid" src="{{ car.image.url|default_if_none:'#' }}">
+            <img height="500" width="1000" class="img-fluid" src="{{ car.output_image.url|default_if_none:'#' }}">
+            <h2>number of cars: {{ car.number_of_cars }}</h2>
+            <h2>{{ car.created_at }}</h2>
+        </div>
+    </div>
+</article>
+{% endfor %}
+{% endblock content %}
